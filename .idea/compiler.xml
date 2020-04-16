@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="LAB8" />
+        <module name="AP-Lab9-JPA" />
         <module name="LAB9" />
+        <module name="LAB8" />
       </profile>
     </annotationProcessing>
   </component>

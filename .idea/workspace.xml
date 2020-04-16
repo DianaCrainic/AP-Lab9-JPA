@@ -17,6 +17,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -39,7 +42,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -143,10 +146,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680/1920.0.1280.984@0.0.1280.680" timestamp="1586982803840" />
-    <state x="187" y="0" key="SettingsEditor" timestamp="1586982377205">
+    <state x="187" y="0" key="SettingsEditor" timestamp="1587060353611">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="187" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1280.984@0.0.1280.680" timestamp="1586982377205" />
+    <state x="187" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1280.984@0.0.1280.680" timestamp="1587060353611" />
     <state x="91" y="37" key="new project wizard" timestamp="1586524088604">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
