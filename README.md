@@ -1,1 +1,4 @@
-AP-Lab9-JPA
+# JPA
+
+- Compulsory
+- Optional (first task)
