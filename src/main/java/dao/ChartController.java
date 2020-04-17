@@ -13,7 +13,7 @@ import java.util.*;
 public class ChartController extends Controller {
     public void create(int albumId, int numberOfAlbums) throws SQLException {
         connection = getConnection();
-        String sql = "INSERT INTO chart (album_id, profit) VALUES(?,?);";
+        String sql = "INSERT INTO charts (album_id, profit) VALUES(?,?);";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1, albumId);
         preparedStatement.setInt(2, numberOfAlbums);
@@ -46,7 +46,7 @@ public class ChartController extends Controller {
         Statement statement = connection.createStatement();
         String query = "SELECT artists.name, SUM(profit) AS total " +
                 "FROM artists JOIN albums ON artists.id = albums.artist_id " +
-                "JOIN chart ON albums.id = chart.album_id " +
+                "JOIN charts ON albums.id = charts.album_id " +
                 "GROUP BY artists.name " +
                 "ORDER BY total DESC;";
         ResultSet resultSet = statement.executeQuery(query);

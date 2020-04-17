@@ -11,4 +11,9 @@ create table albums(
     release_year integer,
     primary key (id)
 );
-
+create table chart (
+    id integer not null generated always as identity,
+    album_id integer not null references albums on delete restrict,
+    profit integer, 
+    primary key (id)
+);

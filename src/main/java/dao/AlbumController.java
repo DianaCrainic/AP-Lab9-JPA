@@ -1,7 +1,7 @@
 package dao;
 
 import com.github.javafaker.Faker;
-import models.Album;
+import entity.Album;
 
 import java.util.*;
 import java.sql.*;
