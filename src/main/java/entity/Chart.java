@@ -1,12 +1,24 @@
-package models;
+package entity;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Chart class
  * -information about a chart
  */
-public class Chart {
+@Entity
+@Table(name = "charts")
+public class Chart implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "album_id")
     private int albumId;
+
+    @Column(name = "profit")
     private int profit;
 
     public Chart(int id, int albumId, int profit) {

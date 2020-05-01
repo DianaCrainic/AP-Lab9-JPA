@@ -1,6 +1,7 @@
-package dao;
+package controller;
 
 import com.github.javafaker.Faker;
+import db.Database;
 import entity.Album;
 
 import java.util.*;
@@ -14,11 +15,13 @@ import java.sql.*;
  */
 public class AlbumController extends Controller {
 
+    private Connection connection = Database.getConnection();
+
     public AlbumController() {
     }
 
     public void create(String name, int artistId, int releaseYear) throws SQLException {
-        connection = getConnection();
+
         String sql = "INSERT INTO albums (name, artist_id, release_year) VALUES(?,?,?);";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, name);

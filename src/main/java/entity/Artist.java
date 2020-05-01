@@ -1,16 +1,29 @@
-package models;
+package entity;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Artist class:
  * - information about an artist
  */
-public class Artist {
+@Entity
+@Table(name = "artists")
+public class Artist implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "country")
     private String country;
+
+    private List<Album> albumList = new ArrayList<>();
 
     public Artist(int id, String name, String country) {
         this.id = id;

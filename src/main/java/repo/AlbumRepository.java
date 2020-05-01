@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * AlbumRepository class:
- * - create method: receives an entity and saves it into the database;
+ * - create method (from AbstractRepository): receives an entity and saves it into the database;
  * - findById method: returns an entity based on its primary key;
  * - findByName method: returns a list of entities that match a given name pattern.
  * Use a named query in order to implement this method.
@@ -17,18 +17,22 @@ import java.util.List;
  * This class also has findByArtist method, that returns the list of albums
  * of a given artist. Use a named query in order to implement this method.
  */
-public class AlbumRepository {
-    private EntityManager entityManager;
+public class AlbumRepository extends AbstractRepository<Album> {
 
     public AlbumRepository(EntityManager entityManager) {
-        this.entityManager = entityManager;
+        super();
     }
 
+    public AlbumRepository() {
+
+    }
+    /*
     public void create(Album album) {
         entityManager.getTransaction().begin();
         entityManager.persist(album);
         entityManager.getTransaction().commit();
     }
+    */
 
     public Album findById(int id) {
         Album album = entityManager.find(Album.class, id);

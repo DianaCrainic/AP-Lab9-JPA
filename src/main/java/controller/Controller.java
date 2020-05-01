@@ -1,4 +1,4 @@
-package dao;
+package controller;
 
 import db.Database;
 import java.sql.Connection;
@@ -8,9 +8,9 @@ import java.sql.Connection;
  * - responsible for connection to DB
  */
 public class Controller {
-    Connection connection = null;
+    private Connection connection = Database.getConnection();
 
-    Connection getConnection(){
+    public Connection getConnection(){
         if(connection == null){
             connection = Database.getInstance().getConnection();
         }

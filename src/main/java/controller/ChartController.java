@@ -1,4 +1,6 @@
-package dao;
+package controller;
+
+import db.Database;
 
 import java.sql.*;
 import java.util.*;
@@ -11,6 +13,9 @@ import java.util.*;
  * -generate a top
  */
 public class ChartController extends Controller {
+
+    private Connection connection = Database.getConnection();
+
     public void create(int albumId, int numberOfAlbums) throws SQLException {
         connection = getConnection();
         String sql = "INSERT INTO charts (album_id, profit) VALUES(?,?);";

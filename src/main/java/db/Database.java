@@ -9,9 +9,9 @@ import java.util.*;
 public class Database implements AutoCloseable {
 
     private static Database instance;
-    private Connection connection;
+    private static Connection connection;
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         return connection;
     }
 
